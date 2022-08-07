@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  @font-face {
+    font-family: lexendDeca;
+    src: url(fonts/LexendDeca-Regular.ttf);
+  }
+
+body {
+    background-image: url(img/underwater.gif);
+    background-blend-mode: screen;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #94beeb;
+    font-family: 'Lexend Deca', sans-serif;
+    padding: 50px;
+}
+
+div {
+    background-color: #94beeb;
+    width: auto;
+    border: 15px #afceed;
+    border-radius: 25px;
+    padding: 20px;
+    margin: 20px;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    padding: 25px;
+  }
+
+h1 {
+    max-width: fit-content;
+    font-size: 100;
+    margin: 0 auto;
+    margin-bottom: 25x;
+    margin-top: 25px;
+    color: #12823d;
+}
+
+h2 {
+    max-width: fit-content;
+    font-size: 50;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    color: #249e53;
+}
+
+h3 {
+    max-width: fit-content;
+    text-align: left;
+    font-size: 25;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    padding-top: 15px;
+    color: #429461;
+}
+
+p {
+    font-size: 10;
+    text-align: left;
+    padding-top: 15px;
+    color: #3fa566;
+}
+
+li {
+    font-size: 10;
+    text-align: left;
+    padding-top: 10px;
+    color: #ddf0e4;
+}
