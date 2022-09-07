@@ -13,3 +13,4 @@ function switchModes(){
         isDarkMode = false;
     }
 }
+

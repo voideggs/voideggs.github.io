@@ -90,11 +90,62 @@ h1:hover{
 }
 
 h2{
-  color: var(--col-08);
   font-size: 2rem;
-  transition: 2s;
-  animation: normal 2s ease-in-out 1;
-  animation-timing-function: ease-in-out;
+}
+
+.waviy {
+  position: relative;
+  -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
+  font-size: 60px;
+}
+
+@keyframes waviy {
+  0%,40%,100% {
+    transform: translateY(0)
+  }
+  20% {
+    transform: translateY(-20px)
+  }
+}
+
+#biotitle{
+  color: var(--col-08);
+  animation: waviy 1s infinite;
+  animation-delay: calc(.1s * var(--i));
+}
+
+#bandtitle{
+  color: var(--col-11);
+  animation: waviy 1s infinite;
+  animation-delay: calc(.1s * var(--i));
+}  
+
+#discotitle{
+  color: var(--col-03);
+  animation: waviy 1s infinite;
+  animation-delay: calc(.1s * var(--i));
+}
+
+#comptitle{
+  color: var(--col-09);
+  animation: waviy 1s infinite;
+  animation-delay: calc(.1s * var(--i));
+}
+
+#filmtitle{
+  color: var(--col-07);
+  animation: waviy 1s infinite;
+  animation-delay: calc(.1s * var(--i));
+}
+
+#reftitle{
+  color: var(--col-10);
+  animation: waviy 1s infinite;
+  animation-delay: calc(.1s * var(--i));
+}
+
+#img2008{
+  transform: rotateZ(-2deg);
 }
 
 p{
