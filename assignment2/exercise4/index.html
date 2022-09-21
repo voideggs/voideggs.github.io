@@ -1,0 +1,104 @@
+<!-- This exercise is built off the MDN Video and Audio APIs tutorial written by MDN contributors  -->
+<!-- https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs -->
+<!-- The base files from the example were modified and filled in via the tutorial and some extra commenting by Patrick McMahon -->
+<!-- Orginal Files: https://github.com/mdn/learning-area/blob/main/javascript/apis/video-audio/start/media-player-start.zip -->
+
+<!DOCTYPE HTML>
+<html lang="en-gb">
+  <head>
+  	<meta charset="utf-8">
+  	<title>Video player example</title>
+  	<link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="player">
+      <h1>Art Time, Handheld Windmill / Fan</h1>
+
+<!-- this is a video from Cooking with a Dog from 2009 called 'How to Make Bento (Perfectly Balanced Bento Recipe for Lunch Box Meal) | Cooking with Dog' were she shows you how to make a bento box with her pet dog -->
+
+      <video id="media" controls>
+        <source src="video/berry-bunch_handheld-windmill-fan.mp4" type="video/mp4" autoplay>
+      </video>
+
+      <!-- <audio id="media" muted="false" controls>
+        <source src="video/berry-bunch_handheld-windmill-fan.mp4" type="audio/mp3">
+      </audio> -->      
+
+      <div class="controls video-controls">
+      <!-- <div class="controls audio-controls"> -->
+
+        <button class="play" data-icon="D" aria-label="play pause toggle"></button>
+        <button class="stop" data-icon="F" aria-label="stop"></button>
+        <div class="timer"><div class="timer-bar"></div><span aria-label="timer" class="timer-span">00:00</span></div>
+        <button class="mute" data-icon="-" aria-label="mute audio"></button>
+        <button class="volumechange" data-icon="U" aria-label="volumechange"></button>
+        <button class="rwd" data-icon="M" aria-label="rewind"></button>
+        <button class="backward" data-icon="H" aria-label="backward"></button>  
+        <button class="fwd" data-icon="A" aria-label="fastforward"></button>  
+        <button class="full" data-icon="+" aria-label="fullscreen"></button>
+
+      </div>
+    </div>
+    <script src="custom-player.js"></script>
+  </body>
+</html>
+
+<!-- Due to file size I've instead provided links to the various media that you can include for the different contexts -->
+<!-- Just put the links into the src attribute on the media player -->
+
+<!-- Music to relax/study to -->
+<!-- https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/erokia_ambient-wave-56-msfxp7-78.mp3 -->
+<!-- If you use erokia_ambient-wave-56-msfxp7-78.mp3 please include the following on your page -->
+
+<!-- <p class="attribution">
+  "<a target="_blank" rel="noopener noreferrer" href="https://freesound.org/people/Erokia/sounds/516902">Ambient Wave 56 - (MSfxP7 - 78)</a>" by 
+  <a target="_blank" rel="noopener noreferrer" href="https://freesound.org/people/Erokia">Erokia</a> is licensed under 
+  <a target="_blank" rel="noopener noreferrer" href="https://creativecommons.org/licenses/by-nc/4.0/?ref=openverse">CC BY-NC 4.0 
+    <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img>
+    <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img>
+    <img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img>
+  </a>. 
+</p>  -->
+
+
+<!-- Cooking/crafting tutorial video -->
+<!-- https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/berry-bunch_handheld-windmill-fan.mp4 -->
+<!-- If you use berry-bunch_handheld-windmill-fan.mp4 please include the following on your page -->
+<!-- <p class="attribution">
+  "<a target="_blank" rel="noopener noreferrer" href="https://vimeo.com/719005078">Art Time, Handheld Windmill / Fan</a>" by 
+  <a target="_blank" rel="noopener noreferrer" href="https://vimeo.com/berrybunchfamily">theBerry Bunch</a> is licensed under 
+  <a target="_blank" rel="noopener noreferrer" href="https://creativecommons.org/licenses/by-nc/4.0/?ref=openverse">CC BY-NC 4.0 
+    <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img>
+    <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img>
+    <img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img>
+  </a>. 
+</p>  -->
+
+
+<!-- Music video -->
+<!-- https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/miac.mp4 -->
+<!-- No attribution needed -->
+
+
+<!-- DJ mix -->
+<!-- https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/CHAABI-MAROC-MIX_CHAABI-MIX.mp3 -->
+<!-- If you use CHAABI-MAROC-MIX_CHAABI-MIX.mp3 please include the following on your page -->
+<!--  <p class="attribution">
+  "<a target="_blank" rel="noopener noreferrer" href="https://www.jamendo.com/track/739121">CHAABI MAROC MIX</a>" by 
+  <a target="_blank" rel="noopener noreferrer" href="https://www.jamendo.com/artist/367146/CHAABI_MIX">CHAABI MIX</a> is licensed under 
+  <a target="_blank" rel="noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/3.0/?ref=openverse">CC BY-NC-SA 3.0 
+    <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img>
+    <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img>
+    <img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img>
+    <img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img>
+  </a>. 
+</p>  -->
+
+
+<!-- Music album -->
+<!-- https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/p-hase_Hes.mp3 -->
+<!-- https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/p-hase_Dry-Down-feat-Ben-Snaath.mp3 -->
+<!-- https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/p-hase_Leapt.mp3 -->
+<!-- https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/p-hase_Water-Feature.mp3 -->
+<!-- No attribution needed -->
