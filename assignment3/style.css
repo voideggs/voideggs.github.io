@@ -1,0 +1,113 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    background-color: var(--col-01);
+}
+
+:root{
+    --col-01: #b5c392;
+    --col-02: #4f3d33;
+    --col-03: #688f47;
+    --col-04: #8fbd68;
+}
+
+.container {  display: grid;
+    grid-template-columns: 0.2fr 1.9fr 0.9fr;
+    grid-template-rows: 0.6fr 2fr 0.4fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "item-one item-two item-three"
+      "item-four item-five item-six"
+      "item-seven item-eight item-nine";
+  }
+  
+  .item-five { grid-area: item-five; }
+  
+  .item-one { grid-area: item-one; }
+  
+  .item-two { grid-area: item-two; }
+  
+  .item-three { grid-area: item-three; }
+  
+  .item-four { grid-area: item-four; }
+  
+  .item-six { grid-area: item-six; }
+  
+  .item-seven { grid-area: item-seven; }
+  
+  .item-eight { grid-area: item-eight; }
+  
+  .item-nine { grid-area: item-nine; }
+  
+#container {
+    position: relative;
+	margin: 0px auto;
+	width: 1920px;
+	height: 1080px;
+}
+#videoElement {
+    position: relative;
+	width: 1280px;
+	height: 720px;
+	background-color: #666;
+}
+
+#cameralens {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10%;
+}
+
+#click-photo {
+    transition-duration: 0.4s;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 10px;
+    font-family: 'Gamja Flower', cursive;
+    background-color: var(--col-03);
+}
+
+#click-photo:hover {
+    background-color: var(--col-04);
+  }
+
+#canvas {
+    display: none;
+    border: 2px var(--col-03);
+  }
+
+  .output {
+    width: 340px;
+    display: inline-block;
+    vertical-align: top;
+  }  
+
+.filter_label{
+    font-size: 50px;
+    font-family: 'Gamja Flower', cursive;
+    left: auto;
+    border: 0;
+    border-radius: 0.25rem;
+    display: inline-block;
+    margin: 0.5rem 0.25rem 0 0;
+    padding: 0.25rem 0.45rem;
+    user-select: none;
+    white-space: nowrap;
+    color: var(--col-03);
+    --url: url(#sepia);
+}
+
+.grid-item{
+    border: var(--border-one);
+    background-color: var(--col-01);
+}
+
+h1{
+    font-size: 60px;
+    text-align: center;
+    color: var(--col-03);
+    font-family: 'Gamja Flower', cursive;
+}

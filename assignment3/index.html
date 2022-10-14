@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    
+    <head>
+
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap" rel="stylesheet">
+        <script src="script.js"></script>
+
+    </head>
+
+    <body>
+        <div class="container">
+            <!-- Using the grid.layoutit.com website from assignment 2, execrise 1 i thought i could create the camera layout this way and put different elements of the camera in the item numbers -->
+            <div class="grid-item" id="item-one"></div>
+            <div class="grid-item" id="item-two">
+                <h1>Living in the Picture</h1>
+                <img id="cameralens" src="img/cameralens.png">
+                <!-- This is to take a screenshot from the webcam -->
+                <button id="click-photo">Click for Picture</button>
+            </div>
+            <div class="grid-item" id="item-three"></div>
+            <div class="grid-item" id="item-four"></div>
+            <div class="grid-item" id="item-five">
+                <video autoplay="true" id="videoElement" poster="img/camera-back1.png"></video>
+            </div>
+            <div class="grid-item" id="item-six">
+                <!-- This section of code is my attempt of creating filters that can be applied on the webcam, I attempted to use filters similar to webkit's presets and applied it onto each label, making it labels over buttons keeps to make sure none of the filters overlap with one another -->
+                <form>
+                <div class="app__panel" data-elm="filters">
+                    <label class="filter_label">
+                        <input type="radio" class="u-hidden" id="filter-sepia" name="url" data-elm="url" value="url('#sepia')">
+                        <span>sepia</span>
+                    </label>
+                    <label class="filter_label">
+                        <input type="radio" class="u-hidden" id="filter-x-rays" name="url" data-elm="url" value="url('#x-rays')">
+                        <span>x-rays</span>
+                    </label>
+                    <label class="filter_label">
+                        <input type="radio" class="u-hidden" id="filter-noise" name="url" data-elm="url" value="url('#noise')">
+                        <span>noise</span>
+                    </label>
+                    <label class="filter_label">
+                        <input type="radio" class="u-hidden" id="filter-squiggly-0" name="url" data-elm="url" value="url('#squiggly-0')">
+                        <span>squiggly-0</span>
+                    </label>
+                    <label class="filter_label">
+                        <input type="radio" class="u-hidden" id="filter-posterize" name="url" data-elm="url" value="url('#posterize')">
+                        <span>posterize</span>
+                    </label>
+                    <label class="filter_label">
+                        <input type="radio" class="u-hidden" id="filter-dancing" name="url" data-elm="url" value="url('#dancing')">
+                        <span>dancing</span>
+                    </label>
+                    <label class="filter_label">
+                        <input type="radio" class="u-hidden" id="filter-drops" name="url" data-elm="url" value="url('#drops')">
+                        <span>drops</span>
+                    </label>
+                    <label class="filter_label">
+                        <input type="radio" class="u-hidden" id="filter-grain" name="url" data-elm="url" value="url('#grain')">
+                        <span>grain</span>
+                    </label>
+                    <label class="filter_label">
+                        <input type="radio" class="u-hidden" id="filter-fluffy" name="url" data-elm="url" value="url('#fluffy')">
+                        <span>fluffy</span>
+                    </label></div>
+            </div>
+        </form>
+            <div class="grid-item" id="item-seven"></div>
+            <div class="grid-item" id="item-eight"></div>
+            <div class="grid-item" id="item-nine"></div>  
+            <canvas id="canvas" width="480" height="240"></canvas>
+            <div class="output">
+                <img id="photo"/>
+              </div>
+    </body>
+
+</html>
